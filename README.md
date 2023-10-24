@@ -11,10 +11,10 @@ This class represents the surface of Mars as a rectangular grid. It provides met
 - Check if a position on the grid has a "scent" indicating a previously lost robot.
 - Mark a position with a "scent" when a robot is lost.
 
-<br>name (str): The name of the planet. Default value is "Mars".
-<br>width (int): The width of the planet's grid. Default value is 50.
-<br>length (int): The length of the planet's grid. Default value is 50.
-<br>robot_scent (set): A set storing the coordinates where robots have left a "scent" due to being lost.
+name (str): The name of the planet. Default value is "Mars".<br>
+width (int): The width of the planet's grid. Default value is 50.<br>
+length (int): The length of the planet's grid. Default value is 50.<br>
+robot_scent (set): A set storing the coordinates where robots have left a "scent" due to being lost.
 
 ### Methods
 ```python
@@ -48,13 +48,29 @@ else:
 ```
 
 ### 2. Robot Class
-This class represents a robot that can move on the Mars grid. It provides methods to:
-- Move forward based on the robot's current orientation.
-- Turn left or right.
-- Execute a given instruction (either move forward, turn left, or turn right).
+The Robot class simulates a robot's movement on a planet's surface. Each robot has a position defined by its x and y coordinates and a direction it's facing. The robot can turn left, turn right, or move forward in the direction it's currently facing. If a robot moves to a position where a previous robot was lost, it leaves a "scent" on that position, and any subsequent robots will recognize this scent and avoid getting lost at the same location.
 
+### Attributes
+**x** (int): The x-coordinate of the robot's position.<br>
+**y** (int): The y-coordinate of the robot's position.<br>
+**direction** (str): The current direction the robot is facing. It can be "N" (North), "E" (East), "S" (South), or "W" (West).<br>
+**planet** (Planet): The planet object on which the robot is operating.<br>
+**lost** (bool): A flag indicating whether the robot is lost.
+
+### Constants
+**DIRECTION** (List[str]): List of all possible directions a robot can face.<br>
+**LEFT_TURNS** (Dict[str, str]): Dictionary mapping the current direction to the direction after a left turn.<br>
+**RIGHT_TURNS** (Dict[str, str]): Dictionary mapping the current direction to the direction after a right turn.
+
+### Methods
+```python
+move() -> None: # Moves the robot forward in its current direction.
+turn_left() -> None: # Turns the robot 90 degrees to the left without changing its position.
+turn_right() -> None: # Turns the robot 90 degrees to the right without changing its position.
+execute_instruction(instruction: str) -> None: # Executes a given instruction (either move forward, turn left, or turn right).
+```
 ## How to Run the Code
-To simulate the movement of robots based on a set of instructions, use the `process_instructions` function. Provide it with a list of strings representing the instructions, and it will return the final positions of the robots.
+To simulate the movement of robots based on a set of instructions, use the ```process_instructions``` function in the ```tests\UnitTesting.py```. Provide it with a list of strings representing the instructions, and it will return the final positions of the robots.
 
 ```python
 instructions = ["5 3", "1 1 E", "RFRFRFRF", "3 2 N", "FRRFLLFFRRFLL", "0 3 W", "LLFFFLFLFL"]
