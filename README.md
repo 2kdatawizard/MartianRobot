@@ -2,9 +2,6 @@
 This is year 2149, earth seemed like a distant memory and the human race had not only merged with machines but had also found a new home on the red planet.
 Mars had its challenges. The unpredictable sandstorms, the vast desolate plains, and the cliffs that dropped into the abyss. To navigate this rugged terrain, robots were created, each equipped with state-of-the-art navigation systems and learning algorithms. These robots, many the size of small cars, roamed the Martian landscapes, carrying out tasks, exploring new territories, and setting up bases for further human-machine expansion.
 
-# Martian Robots Project
-
-## Introduction
 This project simulates the movement of robots on the surface of Mars, which is represented as a rectangular grid. Robots can move around the grid based on instructions provided, and if a robot moves off the edge of the grid, it is considered "lost". The position where a robot is lost leaves a "scent", preventing future robots from getting lost at the same position.
 
 ## Modules/Classes Overview
