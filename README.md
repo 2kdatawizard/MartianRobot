@@ -11,29 +11,25 @@ This class represents the surface of Mars as a rectangular grid. It provides met
 - Check if a position on the grid has a "scent" indicating a previously lost robot.
 - Mark a position with a "scent" when a robot is lost.
 
-Description:
-The Planet class represents a rectangular grid simulating the surface of a planet. This class provides functionalities to mark certain grid positions with a "scent" indicating that a robot has previously been lost at that position. The class also allows querying if a specific grid position has a scent.
+### Attributes
+<br>name (str): The name of the planet. Default value is "Mars".
+<br>width (int): The width of the planet's grid. Default value is 50.
+<br>length (int): The length of the planet's grid. Default value is 50.
+<br>robot_scent (set): A set storing the coordinates where robots have left a "scent" due to being lost.
 
-Attributes:
-name (str): The name of the planet. Default value is "Mars".
-width (int): The width of the planet's grid. Default value is 50.
-length (int): The length of the planet's grid. Default value is 50.
-robot_scent (set): A set storing the coordinates where robots have left a "scent" due to being lost.
-Methods:
-add_scent_flag(x: int, y: int) -> None:
-Adds a scent flag at the specified grid coordinates.
-Parameters:
+### Methods
+```python
+add_scent_flag(x: int, y: int) -> None: # Adds a scent flag at the specified grid coordinates.
+
 x (int): The x-coordinate of the grid position.
 y (int): The y-coordinate of the grid position.
+
 is_scented(x: int, y: int) -> bool:
-Checks if a specific grid position has a scent.
-Parameters:
-x (int): The x-coordinate of the grid position.
-y (int): The y-coordinate of the grid position.
-Returns:
-True if the position has a scent, False otherwise.
+It checks if a specific grid position has a scent.
 
-Usage:
+Returns True if the position has a scent, False otherwise.
+```
+
 To initialize a planet with default parameters:
 ```python
 mars = Planet()
