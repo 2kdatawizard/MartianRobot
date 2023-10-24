@@ -4,7 +4,7 @@ Mars had its challenges. The unpredictable sandstorms, the vast desolate plains,
 
 This project simulates the movement of robots on the surface of Mars, which is represented as a rectangular grid. Robots can move around the grid based on instructions provided, and if a robot moves off the edge of the grid, it is considered "lost". The position where a robot is lost leaves a "scent", preventing future robots from getting lost at the same position.
 
-## Modules/Classes Overview
+## Classes Overview
 
 ### 1. Planet Class
 This class represents the surface of Mars as a rectangular grid. It provides methods to:
