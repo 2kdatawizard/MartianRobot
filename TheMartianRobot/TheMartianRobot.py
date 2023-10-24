@@ -1,15 +1,37 @@
 
 class Planet:
-    def __init__(self, name:str = "Mars",width:int=50,length:int=50):
+    def __init__(self,name:str="mars",width:int=50,length:int=50):
+        """
+        Initialize a Planet object.
+        
+        :param name: Name of the planet. Default is "Mars".
+        :param width: Width of the planet's grid. Default is 50.
+        :param length: Length of the planet's grid. Default is 50.
+        """
+        self.name = name
         self.width = width
         self.length = length
         self.robot_scent = set() # Store robots scent in a set
 
     def add_scent_flag(self, x:int, y:int)->None:
+        """
+        Add a scent flag at the specified coordinates. 
+        This indicates a robot has been lost at this position.
+        
+        :param x: x-coordinate
+        :param y: y-coordinate
+        """        
         self.robot_scent.add((x, y))
 
     def is_scented(self, x:int, y:int)->bool:
-        return (x, y) in self.robot_scent
+        """
+        Check if a position on the planet has a scent.
+        
+        :param x: x-coordinate
+        :param y: y-coordinate
+        :return: True if position is scented, False otherwise.
+        """
+        return (x, y) in self.robot_scent  
 
 class Robot:
     DIRECTION = ["N","E","S","W"]
