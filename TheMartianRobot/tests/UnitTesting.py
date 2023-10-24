@@ -18,7 +18,7 @@ class TestRobotMoveFunction(unittest.TestCase):
     
     def setUp(self):
         # Set up a Planet instance for the tests
-        self.planet = Planet(5, 3)
+        self.planet = Planet("Mars",50,50)
     
     def test_move_within_bounds(self):
         logging.info(f"Starting test: test_move_within_bounds {datetime.datetime.now()}")
@@ -29,23 +29,23 @@ class TestRobotMoveFunction(unittest.TestCase):
     
     def test_move_out_of_bounds_without_scent(self):
         logging.info(f"Starting test: test_move_out_of_bounds_without_scent {datetime.datetime.now()}")
-        robot = Robot(5, 3, "N", self.planet)
+        robot = Robot(5, self.planet.length + 1, "N", self.planet)
         robot.move()
-        self.assertEqual((robot.x, robot.y), (5, 3))
+        self.assertEqual((robot.x, robot.y), (5, self.planet.length + 1))
         self.assertTrue(robot.lost)
         logging.info(f"Completed test: test_move_out_of_bounds_without_scent {datetime.datetime.now()}")
     
     def test_move_out_of_bounds_with_scent(self):
         logging.info(f"Starting test: test_move_out_of_bounds_with_scent {datetime.datetime.now()}")
         # First robot leaves a scent
-        robot1 = Robot(5, 3, "N", self.planet)
+        robot1 = Robot(5, 50, "N", self.planet)
         robot1.move()
         self.assertTrue(robot1.lost)
         
-        # Second robot tries to move to the same position        
-        robot2 = Robot(5, 3, "N", self.planet)
+        # Second robot tries to move to the same position
+        robot2 = Robot(5, self.planet.length - 1, "N", self.planet)
         robot2.move()
-        self.assertEqual((robot2.x, robot2.y), (5, 4))
+        self.assertEqual((robot2.x, robot2.y), (5, self.planet.length))
         self.assertFalse(robot2.lost)
         logging.info(f"Completed test: test_move_out_of_bounds_with_scent {datetime.datetime.now()}")
     
