@@ -1,0 +1,26 @@
+2023-10-24 15:35:22,310 - INFO - Starting test: test_move_in_all_directions 2023-10-24 15:35:22.309056
+2023-10-24 15:35:22,335 - INFO - Completed test: test_move_in_all_directions 2023-10-24 15:35:22.331274
+2023-10-24 15:35:22,345 - INFO - Starting test: test_move_out_of_bounds_with_scent 2023-10-24 15:35:22.345697
+2023-10-24 15:35:22,351 - INFO - Completed test: test_move_out_of_bounds_with_scent 2023-10-24 15:35:22.351698
+2023-10-24 15:35:22,354 - INFO - Starting test: test_move_out_of_bounds_without_scent 2023-10-24 15:35:22.354698
+2023-10-24 15:35:22,356 - INFO - Completed test: test_move_out_of_bounds_without_scent 2023-10-24 15:35:22.355698
+2023-10-24 15:35:22,373 - INFO - Starting test: test_move_within_bounds 2023-10-24 15:35:22.373851
+2023-10-24 15:35:22,378 - INFO - Completed test: test_move_within_bounds 2023-10-24 15:35:22.377849
+2023-10-24 15:35:22,386 - INFO - Starting test: test_execute_move_forward 2023-10-24 15:35:22.386359
+2023-10-24 15:35:22,389 - INFO - Completed test: test_execute_move_forward 2023-10-24 15:35:22.389375
+2023-10-24 15:35:22,397 - INFO - Starting test: test_execute_turn_left 2023-10-24 15:35:22.397757
+2023-10-24 15:35:22,426 - INFO - Completed test: test_execute_turn_left 2023-10-24 15:35:22.426761
+2023-10-24 15:35:22,431 - INFO - Starting test: test_execute_turn_right 2023-10-24 15:35:22.431756
+2023-10-24 15:35:22,441 - INFO - Completed test: test_execute_turn_right 2023-10-24 15:35:22.441760
+2023-10-24 15:35:22,449 - INFO - Starting Test Case 1 2023-10-24 15:35:22.449258
+2023-10-24 15:35:22,467 - ERROR - Test Case 1 Failed! 2023-10-24 15:35:22.466485
+2023-10-24 15:35:22,472 - ERROR - Expected: ['1 1 E', '3 3 N LOST', '2 3 S'] 2023-10-24 15:35:22.472945
+2023-10-24 15:35:22,476 - ERROR - Got: ['1 1 E', '3 3 N', '2 4 S']
+2023-10-24 15:35:22,494 - INFO - Starting Test Case 2 2023-10-24 15:35:22.493840
+2023-10-24 15:35:22,501 - INFO - Completed Test Case 2 2023-10-24 15:35:22.498840
+2023-10-24 15:35:22,505 - INFO - Starting Test Case 3 2023-10-24 15:35:22.504170
+2023-10-24 15:35:22,508 - INFO - Completed Test Case 3 2023-10-24 15:35:22.508002
+2023-10-24 15:35:22,511 - INFO - Starting Test Case 4 2023-10-24 15:35:22.511005
+2023-10-24 15:35:22,513 - ERROR - Test Case 4 Failed! 2023-10-24 15:35:22.513001
+2023-10-24 15:35:22,514 - ERROR - Expected: ['5 3 N LOST', '5 3 N', '5 3 N'] 2023-10-24 15:35:22.514002
+2023-10-24 15:35:22,522 - ERROR - Got: ['5 3 N LOST', '5 4 N', '5 4 N']
